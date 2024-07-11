@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contenedor %}
+
+<div class="card bg-dark text-white position-relative">
+    <img src="{% static 'img/libreria.jpg' %}" class="card-img" alt="estanteria">
+    <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
+        <h1 class="card-title"><strong>Sitio de Reseñas de Libros</strong></h1>
+        <h5 class="card-text"><strong>¡Bienvenido a nuestro sitio!</strong></h5>
+        <p class="card-text"><strong>Aquí podrás ver reseñas y también dejarlas creando tu sesión</strong></p>
+    </div>
+</div>
+
+<section>
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-5">
+            <div class="col">
+                <div class="card">
+                    <img src="{% static 'img/Libro01.png' %}" class="card-img-top" alt="Libro01" style="width: 100%; height: 190px;">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{% static 'img/Libro02.png' %}" class="card-img-top" alt="Libro02" style="width: 100%; height: 190px;">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{% static 'img/Libro03.png' %}" class="card-img-top" alt="Libro03" style="width: 100%; height: 190px;">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{% static 'img/Libro04.jpg' %}" class="card-img-top" alt="Libro04" style="width: 100%; height: 190px;">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{% static 'img/Libro05.png' %}" class="card-img-top" alt="Libro05" style="width: 100%; height: 190px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background-color: #d9e3ec;" class="m-3">
+    <div class="row row-cols-1 row-cols-md-6 g-5 m-3" style="background-color: #d9e3ec;">
+        <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro06.png' %}" class="card-img-top" alt="Libro06" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">El Alquimista</h5><br><br><br>
+                <p class="card-text">Paulo Coelho</p>
+              </div>
+            </div>
+          </div>
+        <div class="col">
+          <div class="card h-95" style="height: 100%;">
+            <img src="{% static 'img/Libro07.jpg' %}" class="card-img-top" alt="Libro07" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Eye in The Triangle</h5><br><br>
+              <p class="card-text">Aleister Crowley</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro08.png' %}" class="card-img-top" alt="Libro08" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Muchas vidas, muchos maestros</h5><br>
+                <p class="card-text">Brian Weiss</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro09.png' %}" class="card-img-top" alt="Libro09" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Seres Elementales y Espirituales</h5><br>
+                <p class="card-text">Rudolf Steiner</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro10.jpg' %}" class="card-img-top" alt="Libro10" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">A Darkness at Sethanon</h5><br><br>
+                <p class="card-text">Raymond E. Feist</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro11.jpg' %}" class="card-img-top" alt="Libro11" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Queen of Storms</h5><br><br>
+                <p class="card-text">Raymond E. Feist</p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-6 g-5 m-3" style="background-color: #d9e3ec;">
+        <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro12.jpg' %}" class="card-img-top" alt="Libro12" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Magician: Master</h5><br>
+                <p class="card-text">Raymond E. Feist</p>
+              </div>
+            </div>
+          </div>
+        <div class="col">
+          <div class="card h-95" style="height: 100%;">
+            <img src="{% static 'img/Libro13.jpg' %}" class="card-img-top" alt="Libro13" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Silverhorn</h5><br><br>
+              <p class="card-text">Raymond E. Feist</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro14.jpg' %}" class="card-img-top" alt="Libro14" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Master of Furies</h5><br><br>
+                <p class="card-text">Raymond E. Feist</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro15.jpg' %}" class="card-img-top" alt="Libro15" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">A Kingdom Besieged</h5><br>
+                <p class="card-text">Raymond E. Feist</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro16.jpg' %}" class="card-img-top" alt="Libro16" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Magician: Apprentice</h5><br>
+                <p class="card-text">Raymond E. Feist</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-95" style="height: 100%;">
+              <img src="{% static 'img/Libro17.jpg' %}" class="card-img-top" alt="Libro17" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Jimmy and the Crawler</h5><br>
+                <p class="card-text">Raymond E. Feist</p>
+              </div>
+            </div>
+          </div>
+      </div><br>      
+</section>
+
+<!-- <link rel="stylesheet" href="../../assets/css/style.css"> -->
+
+{% endblock %}

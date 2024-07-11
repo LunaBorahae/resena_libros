@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{%load crispy_forms_tags %}
+{% block contenedor %}
+
+<div class="card mx-auto text-center border-0 shadow-none" style="width: 20rem;"><br>
+    <h5 class="card-title">Iniciar sesión</h5>
+    <div class="card-body">
+        <form action="" method="post"> {% csrf_token %}
+            {{ form | crispy }}
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        </form><br>
+    </div>
+</div>
+
+{% endblock %}

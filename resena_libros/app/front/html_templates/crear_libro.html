@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Crear Libro {% endblock %}
+
+{% block contenedor %}
+<div class="container mt-4">
+    <h2 style="color: #1b3d9a">Crear un nuevo Libro</h2>
+    <form method="post" enctype="multipart/form-data" action="{% url 'crear_libro' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-info mt-3">Guardar</button>
+    </form>
+</div><br>
+{% endblock %}

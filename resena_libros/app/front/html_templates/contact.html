@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contacto {% endblock %}
+{% load crispy_forms_tags %}
+{% block contenedor %}
+
+<div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px;">
+    <h2 style="text-align: center; color: #1b3d9a;">Contáctanos</h2>
+    <p style="text-align: center; color: #1b3d9a;">Descubre libros de diversos géneros y autores.</p>
+    <p style="text-align: center; color: #1b3d9a;">Para cualquier consulta, no dudes en ponerte en contacto con nosotros.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6"><br>
+            <h4 style="color: #1b3d9a"><strong>¿Cómo podemos ayudarte?</strong></h4>
+            {% if mensaje %}
+                <div class="alert alert-danger">{{ mensaje }}</div>
+            {% endif %}
+            <form action="{% url 'contacto' %}" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-info">Enviar</button>
+            </form>
+            <br><br><br>
+        </div>
+
+        <div class="col-lg-6"><br><br><br><br>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5>Visítanos en Calle 123, Santiago</h5><br>
+                    <h5><strong>E-mail:</strong>contacto@oficina.com</h5><br>
+                    <h5><strong>Teléfono 1:</strong>9876 5432</h5><br>
+                    <h5><strong>Teléfono 2:</strong>9876 5431</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

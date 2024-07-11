@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contenedor %}
+
+<br><h5 style="text-align: center; margin: 20px 0; padding: 10px; background-color: #5cbbe0; color: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-weight: bold;">Haz click en la imagen de cada libro para ir a su reseña</h5>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      {% for i in libros|slice:":8" %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <section style="background-color: #a5c3dd;" class="m-3">
+              <div class="row row-cols-1 row-cols-md-4 g-5 m-3" style="background-color: #a5c3dd;">
+                  {% for libro in libros %}
+                  <div class="col">
+                      <div class="card h-95" style="height: 100%;">
+                          <a href="{% url 'ver_resena' libro.id %}">
+                              <img src="{{ libro.imagen.url }}" class="card-img-top" alt="{{ libro.titulo }}" style="width: 100%; height: 350px; object-fit: cover;">
+                          </a>
+                          <div class="card-body">
+                              <h5 class="card-title">{{ libro.titulo }}</h5><br>
+                              <p class="card-text"><strong>Autor:</strong> {{ libro.autor }}</p>
+                          </div>
+                      </div>
+                  </div><br>
+                  {% endfor %}
+              </div>
+          </section>
+      </div>
+      {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+{% endblock %}
